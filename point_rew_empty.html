@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Points & Rewards – eTemplates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- ================= SIDEBAR ================= -->
+<aside
+  id="sidebar"
+  class="fixed inset-y-0 left-0 w-64 bg-white border-r z-40
+         transform -translate-x-full transition-transform duration-300
+         md:translate-x-0 md:flex md:flex-col">
+
+         <div class="h-20 flex items-center px-6 border-b">
+        <img src="EVERYGRAD TEMPLATE 1.png" class="w-7 h-7" alt="logo">
+        <span class="ml-3 font-semibold text-lg">eTemplates</span>
+      </div>
+
+      <nav class="flex-1 px-4 py-6">
+        <p class="text-xs font-semibold text-gray-500 mb-3">MENU</p>
+
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-blue-50 text-blue-600 font-medium" href="index.html">
+        <img src="home.png" alt=""> Home
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="details.html">
+        <img src="Icon.png" alt=""> Templates
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="my_uploads.html">
+        <img src="upload-01.png" alt=""> My Uploads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="downloads_filled.html">
+        <img src="Solid.png" alt=""> My Downloads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="point_rew_empty.html">
+        <img src="reward.png" alt=""> Points & Rewards
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="refer.png" alt=""> Referrals
+      </a>
+      
+        <hr class="my-4 border-gray-200">
+
+        <p class="text-xs font-semibold text-gray-500 mb-3">GENERAL</p>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="help.png" alt=""> Help Center
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="setting.png" alt=""> Settings
+      </a>
+
+      </nav>
+
+      <div class="px-4 py-4 border-t">
+        <div class="flex items-center gap-3">
+          <img src="eye.jpg" class="w-10 h-10 rounded-full" alt="user">
+          <div>
+            <div class="font-medium text-sm">Samuel O.</div>
+            <div class="text-xs text-gray-400">samuel23@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div
+  id="sidebarOverlay"
+  onclick="toggleSidebar()"
+  class="fixed inset-0 bg-black/40 z-30 hidden md:hidden">
+</div>
+
+ 
+<header class="md:hidden fixed top-0 left-0 right-0 bg-white border-b z-30">
+  <div class="flex items-center justify-between px-4 py-3">
+    
+    <!-- Left: Menu + Logo -->
+    <div class="flex items-center gap-3">
+      <button onclick="toggleSidebar()" class="text-xl">☰</button>
+      <span class="font-semibold">eTemplates</span>
+    </div>
+
+    <!-- Right: Icons -->
+    <div class="flex items-center gap-4">
+      <button class="text-gray-600">🔍</button>
+      <button class="text-gray-600">🔔</button>
+      <img src="eye.jpg" class="w-8 h-8 rounded-full">
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ================= MAIN ================= -->
+<main class="md:ml-64 pt-20 md:pt-8 px-4 md:px-8">
+
+  <!-- TOP BAR -->
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+    <h1 class="text-xl font-semibold">Points & Rewards</h1>
+
+    <div class="relative w-full md:w-96">
+      <input
+        type="text"
+        placeholder="Search templates by topic, title, or department..."
+        class="w-full pl-10 pr-4 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="mb-6">
+    <h2 class="font-semibold">My Points & Rewards</h2>
+    <p class="text-sm text-gray-500">
+      Track how you earn, spend, and grow your EveryGrad points.
+    </p>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div class="bg-white rounded-lg border p-4">
+      <p class="text-sm text-gray-500">Total Points</p>
+      <p class="text-xl font-semibold mt-1">0</p>
+      <div class="w-1 h-8 bg-blue-600 rounded mt-2"></div>
+    </div>
+
+    <div class="bg-white rounded-lg border p-4">
+      <p class="text-sm text-gray-500">Points Earned</p>
+      <p class="text-xl font-semibold mt-1">0</p>
+      <div class="w-1 h-8 bg-blue-400 rounded mt-2"></div>
+    </div>
+
+    <div class="bg-white rounded-lg border p-4">
+      <p class="text-sm text-gray-500">Points Spent</p>
+      <p class="text-xl font-semibold mt-1">0</p>
+      <div class="w-1 h-8 bg-purple-500 rounded mt-2"></div>
+    </div>
+
+    <div class="bg-white rounded-lg border p-4">
+      <p class="text-sm text-gray-500">Pending Verification</p>
+      <p class="text-xl font-semibold mt-1">0</p>
+      <div class="w-1 h-8 bg-red-400 rounded mt-2"></div>
+    </div>
+  </div>
+
+  <!-- RECENT TRANSACTIONS -->
+  <div class="bg-white border rounded-lg p-10 text-center mb-10">
+    <h3 class="font-semibold mb-2">Recent Transactions</h3>
+
+    <div class="flex flex-col items-center mt-6 text-gray-500">
+      <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
+        📄
+      </div>
+      <p class="font-medium">No transactions yet</p>
+      <p class="text-sm">
+        Upload templates or invite friends to see your points activity here.
+      </p>
+    </div>
+  </div>
+
+  <!-- EARN POINTS -->
+  <div class="bg-gray-100 rounded-lg p-6 mb-16">
+    <h3 class="font-semibold mb-4">Earn Points & Unlock Rewards</h3>
+
+    <div class="bg-white rounded-lg p-6">
+      <p class="text-sm font-medium mb-4">How EveryGrad Template Works</p>
+
+      <div class="space-y-4 text-sm">
+        <div class="flex gap-3">
+          <span class="text-purple-500">⬆️</span>
+          <div>
+            <p class="font-medium">Upload a Template</p>
+            <p class="text-gray-500">
+              Earn +30 pts for every verified upload.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <span class="text-purple-500">👤</span>
+          <div>
+            <p class="font-medium">Profile Completion</p>
+            <p class="text-gray-500">
+              Complete your profile setup to earn +15 pts.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <span class="text-purple-500">🎯</span>
+          <div>
+            <p class="font-medium">Bonus Milestone</p>
+            <p class="text-gray-500">
+              Upload 5 verified templates to earn a 100-pt bonus.
+            </p>
+          </div>
+        </div>
+
+        <a href="#" class="inline-block mt-4 text-blue-600 font-medium">
+          Upload Template →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-sm text-gray-400 border-t pt-6 pb-10 flex flex-col md:flex-row justify-between">
+    <span>© 2025 EveryGrad Template. All rights reserved.</span>
+    <span>Made with ❤️ for students and researchers worldwide</span>
+  </footer>
+</main>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    sidebar.classList.toggle("-translate-x-full");
+    overlay.classList.toggle("hidden");
+  }
+</script>df7
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Uploads — EveryGrad Template</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .sidebar-shadow { box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
+    .chip { background: linear-gradient(90deg,#0ea5a4,#1e3a8a); color: white; font-size: 11px; padding: 4px 8px; border-radius: 6px; }
+    .empty-illustration { opacity: .6; filter: grayscale(.05); }
+    .page-max { max-width: 1180px; }
+    .dashed-line { border-top: 2px dashed rgba(220,38,38,0.25); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <div class="min-h-screen flex">
+
+    <!-- SIDEBAR (desktop) -->
+    <aside id="sidebar" class="hidden md:flex md:flex-col w-64 bg-white sidebar-shadow border-r border-gray-200 fixed top-0 left-0 bottom-0 z-20">
+      <div class="h-20 flex items-center px-6 border-b">
+        <img src="EVERYGRAD TEMPLATE 1.png" class="w-7 h-7" alt="logo">
+        <span class="ml-3 font-semibold text-lg">eTemplates</span>
+      </div>
+
+      <nav class="flex-1 px-4 py-6">
+        <p class="text-xs font-semibold text-gray-500 mb-3">MENU</p>
+
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-blue-50 text-blue-600 font-medium" href="index.html">
+        <img src="home.png" alt=""> Home
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="details.html">
+        <img src="Icon.png" alt=""> Templates
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="upload-01.png" alt=""> My Uploads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="Solid.png" alt=""> My Downloads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="reward.png" alt=""> Points & Rewards
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="refer.png" alt=""> Referrals
+      </a>
+      
+        <hr class="my-4 border-gray-200">
+
+        <p class="text-xs font-semibold text-gray-500 mb-3">GENERAL</p>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="help.png" alt=""> Help Center
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="setting.png" alt=""> Settings
+      </a>
+
+      </nav>
+
+      <div class="px-4 py-4 border-t">
+        <div class="flex items-center gap-3">
+          <img src="eye.jpg" class="w-10 h-10 rounded-full" alt="user">
+          <div>
+            <div class="font-medium text-sm">Samuel O.</div>
+            <div class="text-xs text-gray-400">samuel23@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MOBILE TOPBAR -->
+    <header class="md:hidden fixed top-0 left-0 right-0 z-30 bg-white border-b">
+      <div class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <button id="mobileMenuBtn" class="p-2 rounded-md hover:bg-gray-100" aria-label="open menu">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+
+          <div class="flex items-center gap-2">
+            <img src="https://via.placeholder.com/28" class="w-7 h-7 rounded" alt="logo">
+            <div class="font-semibold">eTemplates</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="p-2 rounded-md hover:bg-gray-100" title="Search">
+            <svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </button>
+          <button class="p-2 rounded-md hover:bg-gray-100" title="Notifications">
+            <svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24"><path d="M15 17h5l-1.4-1.4"/><path d="M4 10v6"/></svg>
+          </button>
+          <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full border-2 border-white shadow-sm" alt="user">
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="flex-1 min-h-screen flex flex-col md:ml-64">
+
+      <!-- top header (desktop) -->
+      <div class="hidden md:flex items-center justify-between h-20 bg-white border-b px-6">
+        <div class="flex items-center gap-6">
+          <h1 class="text-xl font-semibold">My Uploads</h1>
+        </div>
+
+        <div class="flex-1 px-6">
+          <div class="relative max-w-xl mx-auto">
+            <input type="text" placeholder="Search templates by topic, title, or department..." class="w-full rounded-full border border-gray-200 py-2 px-4 pl-10 focus:outline-none">
+            <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button class="p-2 rounded-md hover:bg-gray-100" title="Bookmarks">
+            <svg class="w-5 h-5 text-gray-600"></svg>
+          </button>
+          <button class="p-2 rounded-md hover:bg-gray-100" title="Notifications">
+            <svg class="w-5 h-5 text-gray-600"></svg>
+          </button>
+          <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full" alt="user">
+        </div>
+      </div>
+
+      <!-- page inner container -->
+      <main class="page-max mx-auto w-full flex-1 px-4 md:px-6 lg:px-8 pt-6 md:pt-8">
+
+        <!-- controls row -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+          <div>
+            <h2 class="text-lg font-semibold">Browse Uploads</h2>
+            <p class="text-sm text-gray-500">Manage your uploaded templates</p>
+          </div>
+
+          <div class="flex items-center gap-3 justify-end">
+            <div class="hidden sm:block">
+              <div class="relative">
+                <input type="text" placeholder="Search uploaded template by topic, type, or department..." class="rounded-md border border-gray-200 py-2 px-3 pl-10 w-72 focus:outline-none">
+                <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+              </div>
+            </div>
+
+            <button id="uploadBtn" class="bg-blue-600 text-white rounded-md px-4 py-2 flex items-center gap-2">
+              <svg class="w-4 h-4"><use/></svg>
+              + Upload Template
+            </button>
+
+            <!-- Sort -->
+            <select class="border border-gray-200 rounded-md px-3 py-2 text-sm">
+              <option>Sort by</option>
+            </select>
+
+            <!-- Advance Filter button (opens off-canvas) -->
+            <button onclick="openFilterModal()" class="border border-gray-200 rounded-md px-3 py-2 text-sm flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-500" viewBox="0 0 24 24"><path d="M3 6h18M6 12h12M10 18h4" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+              Advance Filter
+            </button>
+          </div>
+        </div>
+
+        <!-- dashed helper line (visual in screenshot) -->
+        <div class="w-full dashed-line mb-6"></div>
+
+        <!-- EMPTY STATE -->
+        <div class="flex-1 flex items-center justify-center py-20">
+          <div class="w-full max-w-2xl text-center">
+            <div class="flex justify-center mb-6">
+              <img src="https://via.placeholder.com/96" class="empty-illustration" alt="no results">
+            </div>
+
+            <h3 class="text-xl font-semibold mb-2">No results found</h3>
+
+            <p class="text-gray-500 mb-6">We couldn't find any templates for your current selection. Try different criteria or reset filters.</p>
+
+            <div class="flex justify-center">
+              <button onclick="resetFilters()" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Reset Filter</button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- footer (stays at bottom) -->
+      <footer class="bg-white border-t text-sm text-gray-500 px-6 py-5">
+        <div class="page-max mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+          <div>© 2025 EveryGrad Template. All rights reserved.</div>
+          <div class="flex items-center gap-2">Made with <span class="text-red-500">❤️</span> for students and researchers worldwide</div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- MOBILE SIDEBAR OFFCANVAS (slide left) -->
+  <div id="mobilePanel" class="fixed inset-0 z-40 hidden">
+    <div class="absolute inset-0 bg-black/30" onclick="toggleMobile()"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-72 bg-white border-r border-gray-200 p-4 transform -translate-x-0 overflow-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <img src="https://via.placeholder.com/28" class="w-7 h-7" alt="logo">
+        <span class="font-semibold">eTemplates</span>
+        <button class="ml-auto p-1" onclick="toggleMobile()">✕</button>
+      </div>
+      <nav class="space-y-1">
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Home</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Templates</a>
+        <a href="#" class="block px-3 py-2 rounded-md bg-blue-600 text-white">My Uploads</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">My Downloads</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Points & Rewards</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Referrals</a>
+        <hr class="my-4">
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Help Center</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Settings</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- OFF-CANVAS Advance Filter (slides from right) -->
+  <div id="filterModal" class="hidden fixed inset-0 z-[2000] bg-black/40 backdrop-blur-sm">
+    <div id="filterPanel" class="absolute right-0 top-0 h-full w-full max-w-sm bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-out overflow-y-auto p-6">
+      <button onclick="closeFilterModal()" class="absolute right-4 top-4 text-xl text-gray-500 hover:text-black">✕</button>
+      <h2 class="text-lg font-semibold mb-4">Advance Filter</h2>
+
+      <div class="space-y-5 pb-8">
+        <div>
+          <label class="block text-sm font-medium mb-1">Institution</label>
+          <div class="relative">
+            <input type="text" placeholder="Search your institution name" class="w-full border border-gray-200 rounded-md px-3 py-2">
+            <span class="absolute right-3 top-3 text-gray-400">⌄</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Faculty</label>
+          <select class="w-full border border-gray-200 rounded-md px-3 py-2">
+            <option>Select faculty</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Department</label>
+          <select class="w-full border border-gray-200 rounded-md px-3 py-2">
+            <option>Select department</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Template Type</label>
+          <select class="w-full border border-gray-200 rounded-md px-3 py-2">
+            <option>Select Type</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Date Range</label>
+          <input type="date" class="w-full border border-gray-200 rounded-md px-3 py-2">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Minimum Rating: <span id="ratingValue">0.0</span></label>
+          <input id="ratingSlider" type="range" min="0" max="5" step="0.1" value="0" class="w-full accent-blue-600">
+          <div class="flex justify-between text-xs text-gray-400 mt-1"><span>0.0</span><span>5.0</span></div>
+        </div>
+      </div>
+
+      <!-- <-- CORRECTED BUTTON LAYOUT HERE --> 
+      <div class="mt-4 flex gap-3 items-center">
+        <!-- Reset is normal width -->
+        <button onclick="resetFilters(); closeFilterModal();" class="py-2 px-4 border border-gray-200 rounded-md">
+          Reset Filter
+        </button>
+
+        <!-- Apply fills remaining space -->
+        <button class="flex-1 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+          Apply Filter
+        </button>
+      </div>
+      <!-- end corrected buttons -->
+
+    </div>
+  </div>
+
+<script>
+  // mobile sidebar toggle
+  const mobilePanel = document.getElementById('mobilePanel');
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  if (mobileBtn) mobileBtn.addEventListener('click', toggleMobile);
+  function toggleMobile() { mobilePanel.classList.toggle('hidden'); }
+
+  // Filter off-canvas open/close
+  function openFilterModal() {
+    const modal = document.getElementById("filterModal");
+    const panel = document.getElementById("filterPanel");
+    modal.classList.remove("hidden");
+    setTimeout(() => panel.classList.remove("translate-x-full"), 10);
+  }
+  function closeFilterModal() {
+    const modal = document.getElementById("filterModal");
+    const panel = document.getElementById("filterPanel");
+    panel.classList.add("translate-x-full");
+    setTimeout(() => modal.classList.add("hidden"), 300);
+  }
+
+  // slider live value
+  const ratingSlider = document.getElementById('ratingSlider');
+  const ratingValue = document.getElementById('ratingValue');
+  if (ratingSlider && ratingValue) {
+    ratingSlider.addEventListener('input', () => ratingValue.textContent = ratingSlider.value);
+  }
+
+  // Reset filters (dummy)
+  function resetFilters() {
+    // Clear inputs (basic)
+    const inputs = document.querySelectorAll('#filterPanel input, #filterPanel select, #filterPanel textarea');
+    inputs.forEach(i => {
+      if (i.tagName === 'SELECT') i.selectedIndex = 0;
+      else i.value = '';
+    });
+    const r = document.getElementById('ratingSlider');
+    if (r) { r.value = 0; const rv = document.getElementById('ratingValue'); if (rv) rv.textContent = '0.0'; }
+    return false;
+  }
+
+  // wire Reset Filter button in empty state
+  const resetBtn = document.querySelector('button[onclick="resetFilters()"]');
+  if (resetBtn) resetBtn.addEventListener('click', () => {
+    // close panel if open and clear panel inputs
+    try { closeFilterModal(); } catch(e){}
+    resetFilters();
+  });
+</script>
+
+</body>
+</html>

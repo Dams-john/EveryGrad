@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Dashboard</title>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+  
+
+<!-- MOBILE NAVBAR -->
+<div class="lg:hidden flex justify-between items-center p-4 bg-white shadow">
+  
+  <h1 class="text-lg font-semibold flex items-center gap-2">
+    <button 
+  onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')" 
+  class="p-2 rounded bg-gray-200">
+  ☰
+</button>
+    <img src="EVERYGRAD TEMPLATE 1.png" class="w-8"> EveryGrad
+  </h1>
+
+
+
+</div>
+
+<div class="flex">
+
+  <!-- SIDEBAR -->
+<aside 
+  id="sidebar"
+  class="fixed top-0 left-0 bottom-0 z-30 w-64 bg-white border-r border-gray-200
+         transform -translate-x-full transition-transform duration-300
+         md:translate-x-0 md:flex md:flex-col">
+      <div class="h-20 flex items-center px-6 border-b">
+        <img src="EVERYGRAD TEMPLATE 1.png" class="w-7 h-7" alt="logo">
+        <span class="ml-3 font-semibold text-lg">eTemplates</span>
+      </div>
+
+      <nav class="flex-1 px-4 py-6">
+        <p class="text-xs font-semibold text-gray-500 mb-3">MENU</p>
+
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-blue-50 text-blue-600 font-medium" href="index.html">
+        <img src="home.png" alt=""> Home
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="details.html">
+        <img src="Icon.png" alt=""> Templates
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="my_uploads.html">
+        <img src="upload-01.png" alt=""> My Uploads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="downloads_filled.html">
+        <img src="Solid.png" alt=""> My Downloads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="point_rew_filled.html">
+        <img src="reward.png" alt=""> Points & Rewards
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="">
+        <img src="refer.png" alt=""> Referrals
+      </a>
+      
+        <hr class="my-4 border-gray-200">
+
+        <p class="text-xs font-semibold text-gray-500 mb-3">GENERAL</p>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="help.png" alt=""> Help Center
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="setting.png" alt=""> Settings
+      </a>
+
+      </nav>
+
+      <div class="px-4 py-4 border-t">
+        <div class="flex items-center gap-3">
+          <img src="eye.jpg" class="w-10 h-10 rounded-full" alt="user">
+          <div>
+            <div class="font-medium text-sm">Samuel O.</div>
+            <div class="text-xs text-gray-400">samuel23@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div 
+  id="overlay"
+  onclick="document.getElementById('sidebar').classList.add('-translate-x-full')"
+  class="fixed inset-0 bg-black/40 z-20 hidden md:hidden">
+</div>
+
+
+
+  <!-- MAIN CONTENT -->
+<main class="flex-1 p-4 lg:p-8 mt-16 lg:mt-0 md:ml-64">
+
+    <!-- HEADER -->
+    <div class="flex flex-col lg:flex-row justify-between gap-4 mb-6">
+      <h2 class="text-2xl font-semibold">Welcome back, Easy 👋🏽</h2>
+
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-lg w-full sm:w-auto">Upload Template</button>
+        <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg w-full sm:w-auto">Browse Templates</button>
+        <span class="w-10 h-10 rounded-full bg-gray-300 hidden sm:block"></span>
+      </div>
+    </div>
+
+    <p class="text-gray-600 -mt-2 mb-6">
+      Upload your academic templates and earn <br> rewards while helping fellow students succeed.
+    </p>
+
+    <!-- TOP CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+      <!-- Card 1 -->
+      <div class="bg-white shadow rounded-xl flex items-center justify-between p-4 border-l-4 border-blue-500">
+        <div>
+          <p class="text-gray-500 text-sm">Total Uploads</p>
+          <h2 class="text-2xl font-bold">14</h2> <br>
+        <span><a style="color:blue ;" href="">8.2%</a> since last month</span>
+        </div>
+        <i class="ri-file-list-3-line text-4xl text-blue-500"></i>
+        <div class="absolute right-0 top-0 w-12 h-20 bg-blue-100 rotate-12 translate-x-4 -translate-y-4"></div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white shadow rounded-xl flex items-center justify-between p-4 border-l-4 border-green-500">
+        <div>
+          <p class="text-gray-500 text-sm">Total Download</p>
+          <h2 class="text-2xl font-bold">12</h2> <br>
+        <span><a style="color:blue ;" href="">8.2%</a> since last month</span>
+        </div>
+        <i class="ri-user-3-line text-4xl text-green-500"></i>
+        <div class="absolute right-0 top-0 w-12 h-20 bg-green-100 rotate-12 translate-x-4 -translate-y-4"></div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white shadow rounded-xl flex items-center justify-between p-4 border-l-4 border-yellow-500">
+        <div>
+          <p class="text-gray-500 text-sm">Point Wallet</p>
+          <h2 class="text-2xl font-bold">200</h2> <br>
+        <span><a style="color:blue ;" href="">8.2%</a> since last month</span>
+        </div>
+        <i class="ri-download-cloud-2-line text-4xl text-yellow-500"></i>
+        <div class="absolute right-0 top-0 w-12 h-20 bg-yellow-100 rotate-12 translate-x-4 -translate-y-4"></div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white shadow rounded-xl flex items-center justify-between p-4 border-l-4 border-red-500 ">
+        <div>
+          <p class="text-gray-500 text-sm">Referrals</p>
+          <h2 class="text-2xl font-bold">2</h2> <br>
+                  <span><a style="color:tomato ;" href="">8.2%</a> since last month</span>
+
+        </div>
+        <i class="ri-chat-3-line text-4xl text-red-500"></i>
+        <div class="absolute right-0 top-0 w-12 h-20 bg-red-100 rotate-12 translate-x-4 -translate-y-4"></div>
+      </div>
+    </div>
+
+    <!-- RECOMMENDED SECTION -->
+    <h3 class="text-xl font-semibold mt-10 mb-4">Recommended Templates for You</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card Template -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500 mb-1">COMPUTER SCIENCE</p>
+          <h4 class="font-semibold mb-2">Impact of Social Media on Academic Performance</h4>
+          <p class="text-sm text-gray-600 mb-3">This research investigates how social media usage influences students' academic performance...</p>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Lydia Exxole</span>
+            <span>256 ⭐ 4.9</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Template -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500 mb-1">MASS COMMUNICATION</p>
+          <h4 class="font-semibold mb-2">The Impact of Radio Advertising on Local Awareness</h4>
+          <p class="text-sm text-gray-600 mb-3">This research examines the effectiveness of radio advertising in shaping public awareness...</p>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Joseph Bankole</span>
+            <span>256 ⭐ 4.9</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Template -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500 mb-1">MARKETING & COMMUNICATION</p>
+          <h4 class="font-semibold mb-2">Social Media and Brand Influence in Gen Z Audiences</h4>
+          <p class="text-sm text-gray-600 mb-3">Research investigates how social media affects brand loyalty and perception among Gen Z...</p>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Joseph Balo</span>
+            <span>256 ⭐ 4.9</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT’S HOT -->
+    <h3 class="text-xl font-semibold mt-10 mb-4">What’s Hot</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Hot Item -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500 mb-1">BUSINESS</p>
+          <h4 class="font-semibold mb-2">Business Plan Template</h4>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Rebecca Lawan</span>
+            <span>2.5k ⭐ 4.9</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hot Item -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500 mb-1">SCIENCES</p>
+          <h4 class="font-semibold mb-2">Lab Report Structure</h4>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Deborah Folarin</span>
+            <span>2.2k ⭐ 4.9</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hot Item -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+        <img class="h-40 w-full object-cover" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" />
+        <div class="p-4">
+          <p class="text-xs text-gray-500 mb-1">COMPUTER SCIENCE</p>
+          <h4 class="font-semibold mb-2">Research Paper Template - APA Style</h4>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>Lydia Exxole</span>
+            <span>4.9 ⭐</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 text-gray-500 text-sm">
+  © 2025 Template Dashboard — All Rights Reserved.
+</footer>
+
+</body>
+</html>

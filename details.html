@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EveryGrad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .sidebar { min-height: 100vh; }
+    .card-shadow { box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
+    .chip { font-size: 12px; padding: 6px 8px; border-radius: 9999px; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <div class="flex">
+
+<aside
+  id="sidebar"
+  class="fixed top-0 left-0 bottom-0 z-40 w-64 bg-white border-r border-gray-200
+         transform -translate-x-full transition-transform duration-300 ease-in-out
+         md:translate-x-0 md:flex md:flex-col">
+      <div class="h-20 flex items-center px-6 border-b">
+        <img src="EVERYGRAD TEMPLATE 1.png" class="w-7 h-7" alt="logo">
+        <span class="ml-3 font-semibold text-lg">eTemplates</span>
+      </div>
+
+      <nav class="flex-1 px-4 py-6">
+        <p class="text-xs font-semibold text-gray-500 mb-3">MENU</p>
+
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-blue-50 text-blue-600 font-medium" href="index.html">
+        <img src="home.png" alt=""> Home
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="details.html">
+        <img src="Icon.png" alt=""> Templates
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="my_uploads.html">
+        <img src="upload-01.png" alt=""> My Uploads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="down_template.html">
+        <img src="Solid.png" alt=""> My Downloads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="point_rew_filled.html">
+        <img src="reward.png" alt=""> Points & Rewards
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="refer.png" alt=""> Referrals
+      </a>
+      
+        <hr class="my-4 border-gray-200">
+
+        <p class="text-xs font-semibold text-gray-500 mb-3">GENERAL</p>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="help.png" alt=""> Help Center
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="setting.png" alt=""> Settings
+      </a>
+
+      </nav>
+
+      <div class="px-4 py-4 border-t">
+        <div class="flex items-center gap-3">
+          <img src="eye.jpg" class="w-10 h-10 rounded-full" alt="user">
+          <div>
+            <div class="font-medium text-sm">Samuel O.</div>
+            <div class="text-xs text-gray-400">samuel23@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div
+  id="overlay"
+  class="fixed inset-0 bg-black/40 z-30 hidden md:hidden"
+  onclick="closeSidebar()">
+</div>
+
+
+     <button id="menuBtn" class="lg:hidden p-2 rounded-md hover:bg-gray-200 fixed top-4 left-4 z-50 bg-white shadow">
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+<main class="flex-1 md:ml-64">
+
+       <div class="bg-white border-b">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+          <div class="flex items-center gap-3 text-sm text-gray-500">
+            <span>Home</span>
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="text-gray-700">Template Details</span>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <button class="p-2 rounded-full hover:bg-gray-100" aria-label="search">
+              <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </button>
+            <button class="p-2 rounded-full hover:bg-gray-100" aria-label="notifications">
+              <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                <path d="M15 17H9a3 3 0 0 1-3-3V9a6 6 0 1 1 12 0v5a3 3 0 0 1-3 3z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <img src="https://i.pravatar.cc/40" class="w-9 h-9 rounded-full" alt="user">
+          </div>
+        </div>
+      </div>
+
+       <div class="max-w-6xl mx-auto px-6 py-6">
+
+         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+           <div class="lg:col-span-2">
+            <div class="bg-white rounded-lg card-shadow overflow-hidden">
+
+              <div class="relative">
+                <img src="a39b23c22572285b2f45a863902310f5bff6a610.jpg"
+                     class="w-full h-72 object-cover">
+
+                <div class="absolute left-4 top-4 flex flex-col gap-2">
+                  <span class="chip bg-black/60 text-white text-xs">📁 View Template</span>
+                  <span class="chip bg-black/60 text-white text-xs">🗓 Uploaded: Oct 16, 2025</span>
+                  <span class="chip bg-black/60 text-white text-xs">🔍 File size: 1.2MB</span>
+                </div>
+
+                <!-- <div class="absolute left-4 bottom-4 flex items-center gap-3">
+                  <img src="https://i.pravatar.cc/36" class="w-9 h-9 rounded-full border-2 border-white">
+                  <div class="bg-white/90 px-3 py-2 rounded-md text-sm">
+                    <div class="font-semibold">Template Owner</div>
+                    <div class="text-xs text-gray-500">Lydia Emenike</div>
+                  </div>
+                </div> -->
+
+              </div>
+
+              <!-- <div class="p-4 border-t">
+                <div class="flex items-center justify-between">
+                  <div class="text-sm text-gray-600">Final Year Project • PDF</div>
+                  <div class="text-sm text-gray-500">⭐ 4.9 • 2.4k downloads</div>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
+
+          <!-- RIGHT (details) -->
+          <div>
+            <div class="bg-white rounded-lg card-shadow p-5">
+              <div class="text-xs text-gray-500">TEMPLATE</div>
+              <h1 class="mt-2 text-lg font-semibold">Impact of Social Media on Academic Performance</h1>
+
+              <div class="mt-3 text-sm text-gray-600">
+                <div>Template Type: <span class="font-medium">Final Year Project</span></div>
+                <div>Format: <span class="font-medium">PDF</span></div>
+              </div>
+
+              <div class="mt-4 flex items-center gap-3">
+                <img src="https://i.pravatar.cc/36?img=5" class="w-9 h-9 rounded-full border">
+                <div class="text-sm">
+                  <div class="font-medium">Lydia Emenike</div>
+                  <div class="text-xs text-gray-400">Jul 20, 2025</div>
+                </div>
+              </div>
+
+              <button class="mt-5 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">
+                Download Template
+              </button>
+
+              <div class="mt-3 flex items-center justify-between text-sm text-gray-500">
+                <button class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                  Save for later
+                </button>
+                <button class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24">
+                    <path d="M15 12H3M21 6v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                  Share
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+         <div class="mt-6 bg-white rounded-lg card-shadow p-6">
+          <h3 class="text-lg font-semibold mb-3">Template Overview</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            This research investigates how social media usage influences students’ academic performance in Nigerian universities...
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-sm text-gray-700">
+            <div>
+              <div class="flex justify-between py-1"><span class="text-gray-500">Institution</span><span class="font-medium">University of Lagos</span></div>
+              <div class="flex justify-between py-1"><span class="text-gray-500">Department</span><span class="font-medium">Mass Communication</span></div>
+              <div class="flex justify-between py-1"><span class="text-gray-500">Supervisor</span><span class="font-medium">Dr. Wis J. Afai</span></div>
+            </div>
+            <div>
+              <div class="flex justify-between py-1"><span class="text-gray-500">Faculty</span><span class="font-medium">Faculty of Arts</span></div>
+              <div class="flex justify-between py-1"><span class="text-gray-500">Word Count</span><span class="font-medium">12,000 words</span></div>
+              <div class="flex justify-between py-1"><span class="text-gray-500">Year</span><span class="font-medium">2024</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI CHECK -->
+        <div class="mt-6 bg-white rounded-lg card-shadow p-6">
+          <h3 class="text-lg font-semibold mb-4">AI Quality & Originality Check</h3>
+          <div class="space-y-4 text-sm">
+
+            <!-- Bars -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <div class="text-gray-600">Completeness</div>
+                <div style="color: green;" class="font-medium">94%</div>
+              </div>
+              <div class="w-full bg-gray-100 h-2 rounded-full">
+                <div class="h-2 rounded-full" style="width:94%; background:#10B981;"></div>
+              </div>
+              <div class="text-xs text-gray-400 mt-1">Excellent</div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <div class="text-gray-600">Plagiarism Score</div>
+                <div style="color: green;" class="text-gray-600 font-medium">57%</div>
+              </div>
+              <div class="w-full bg-gray-100 h-2 rounded-full">
+                <div class="h-2 rounded-full" style="width:57%; background:#10B981;"></div>
+              </div>
+              <div class="text-xs text-gray-400 mt-1">Safe</div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <div class="text-gray-600">Formatting Compliance</div>
+                <div style="color: tomato;" class="text-gray-600 font-medium">74%</div>
+              </div>
+              <div class="w-full bg-gray-100 h-2 rounded-full">
+                <div class="h-2 rounded-full" style="width:74%; background:#F97316;"></div>
+              </div>
+              <div class="text-xs text-gray-400 mt-1">Good</div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <div class="text-gray-600">Clarity & Structure</div>
+                <div style="color:#EF4444 ;" class="text-gray-600 font-medium">30%</div>
+              </div>
+              <div class="w-full bg-gray-100 h-2 rounded-full">
+                <div class="h-2 rounded-full" style="width:30%; background:#EF4444;"></div>
+              </div>
+              <div class="text-xs text-gray-400 mt-1">Poor</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- YOU MAY ALSO LIKE -->
+        <div class="mt-6">
+          <h3 class="text-lg font-semibold mb-4">You May Also Like</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <article class="bg-white rounded-lg card-shadow overflow-hidden">
+              <div class="relative">
+                <img src="https://picsum.photos/600/360?1" class="w-full h-44 object-cover">
+                <span class="absolute left-3 top-3 bg-blue-600 text-white px-2 py-1 text-xs rounded-md">Final Year Project</span>
+              </div>
+              <div class="p-4 text-sm">
+                <h4 class="font-semibold">Analyzing Student Engagement Through Online Learning Tools</h4>
+                <div class="text-xs text-gray-500 mt-3">by Chris A • 2.4k views • 24 Jun, 2025</div>
+              </div>
+            </article>
+
+            <article class="bg-white rounded-lg card-shadow overflow-hidden">
+              <div class="relative">
+                <img src="https://picsum.photos/600/360?2" class="w-full h-44 object-cover">
+                <span class="absolute left-3 top-3 bg-indigo-600 text-white px-2 py-1 text-xs rounded-md">Thesis</span>
+              </div>
+              <div class="p-4 text-sm">
+                <h4 class="font-semibold">The Impact of Radio Advertising on Local Awareness</h4>
+                <div class="text-xs text-gray-500 mt-3">by Joseph B • 1.1k views • 08 Jul, 2025</div>
+              </div>
+            </article>
+
+            <article class="bg-white rounded-lg card-shadow overflow-hidden">
+              <div class="relative">
+                <img src="https://picsum.photos/600/360?3" class="w-full h-44 object-cover">
+                <span class="absolute left-3 top-3 bg-sky-600 text-white px-2 py-1 text-xs rounded-md">Final Year Project</span>
+              </div>
+              <div class="p-4 text-sm">
+                <h4 class="font-semibold">Social Media and Brand Influence in Gen Z</h4>
+                <div class="text-xs text-gray-500 mt-3">by Angela M • 3.8k views • 22 May, 2025</div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="mt-10 mb-6 text-sm text-gray-500">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <img src="https://i.pravatar.cc/36" class="w-8 h-8 rounded-full">
+              <div>© 2025 EveryGrad Templates. All rights reserved.</div>
+            </div>
+            <div>Made with ♥ for students and researchers worldwide</div>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- SIDEBAR TOGGLE SCRIPT -->
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const menuBtn = document.getElementById("menuBtn");
+
+  function openSidebar() {
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("hidden");
+  }
+
+  function closeSidebar() {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+  }
+
+  menuBtn.addEventListener("click", () => {
+    sidebar.classList.contains("-translate-x-full")
+      ? openSidebar()
+      : closeSidebar();
+  });
+</script>
+
+
+</body>
+</html>

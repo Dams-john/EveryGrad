@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Template Details — eTemplates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small custom styles to match screenshot look */
+    .sidebar-shadow { box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
+    .chip { background: linear-gradient(90deg,#0ea5a4,#1e3a8a); color: white; font-size: 11px; padding: 4px 8px; border-radius: 6px; }
+    .progress-track { background: #f1f5f9; border-radius: 999px; height: 10px; }
+    .progress-fill { height: 10px; border-radius: 999px; }
+    .line-clamp-6 { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <div class="min-h-screen flex">
+
+<aside
+  id="sidebar"
+  class="hidden md:flex md:flex-col w-65 bg-white sidebar-shadow
+         border-r border-gray-200 fixed top-0 left-0 bottom-0 z-20">
+
+  <!-- Logo -->
+  <div class="h-20 flex items-center px-6 border-b">
+    <img src="EVERYGRAD TEMPLATE 1.png" class="w-7 h-7" alt="logo">
+    <span class="ml-3 font-semibold text-lg">eTemplates</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="flex-1 px-4 py-6 overflow-y-auto">
+    <p class="text-xs font-semibold text-gray-500 mb-3">MENU</p>
+
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-blue-50 text-blue-600 font-medium" href="index.html">
+      <img src="home.png" alt=""> Home
+    </a>
+
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="details.html">
+      <img src="Icon.png" alt=""> Templates
+    </a>
+
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+      <img src="upload-01.png" alt=""> My Uploads
+    </a>
+
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+      <img src="Solid.png" alt=""> My Downloads
+    </a>
+
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+      <img src="reward.png" alt=""> Points & Rewards
+    </a>
+
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+      <img src="refer.png" alt=""> Referrals
+    </a>
+
+    <hr class="my-4 border-gray-200">
+
+    <p class="text-xs font-semibold text-gray-500 mb-3">GENERAL</p>
+
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+      <img src="help.png" alt=""> Help Center
+    </a>
+
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+      <img src="setting.png" alt=""> Settings
+    </a>
+  </nav>
+
+  <!-- User -->
+  <div class="px-4 py-4 border-t">
+    <div class="flex items-center gap-3">
+      <img src="eye.jpg" class="w-10 h-10 rounded-full" alt="user">
+      <div>
+        <div class="font-medium text-sm">Samuel O.</div>
+        <div class="text-xs text-gray-400">samuel23@gmail.com</div>
+      </div>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- MOBILE NAVBAR -->
+    <header class="md:hidden fixed top-0 left-0 right-0 z-30 bg-white border-b">
+      <div class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <button id="mobileMenuBtn" class="p-2 rounded-md hover:bg-gray-100" aria-label="open menu">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <div class="flex items-center gap-2">
+            <img src="eye.jpg" class="w-7 h-7" alt="logo">
+            <div class="font-semibold">eTemplates</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="p-2 rounded-md hover:bg-gray-100">
+            <svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118.6 14.5V11a6 6 0 10-12 0v3.5c0 .538-.214 1.055-.595 1.455L4 17h11z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+          </button>
+          <img src="eye.jpg" class="w-8 h-8 rounded-full border-2 border-white shadow-sm" alt="user">
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <div class="flex-1 min-h-screen flex flex-col md:ml-0">
+
+      <!-- content container -->
+      <div class="max-w-6xl mx-auto w-full pt-6 md:pt-10 px-4 md:px-6 lg:px-8">
+
+        <!-- breadcrumb row -->
+        <div class="flex items-center gap-3 text-sm text-gray-500 mb-4 md:mb-6 pt-12 md:pt-0">
+          <a href="#" class="hover:underline text-gray-500">My Uploads</a>
+          <span>/</span>
+          <span class="text-gray-700 font-medium">Template Details</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Left: main image + overview -->
+          <div class="lg:col-span-2 space-y-6">
+
+            <!-- hero image -->
+            <div class="bg-white rounded-lg border border-gray-100 overflow-hidden shadow-sm">
+              <div class="relative">
+                <img src="https://picsum.photos/1200/600?random=10" alt="template" class="w-full object-cover h-64 md:h-80">
+                <div class="absolute left-4 top-4 flex flex-col gap-2">
+                  <span class="bg-black/60 text-white px-3 py-1 text-xs rounded-md">Verified Template</span>
+                  <span class="bg-black/60 text-white px-3 py-1 text-xs rounded-md">Uploaded: Jul 30, 2025</span>
+                </div>
+                <div class="absolute right-4 top-4">
+                  <!-- placeholder small overlay if needed -->
+                </div>
+              </div>
+              <div class="p-6">
+                <h1 class="text-lg md:text-xl font-semibold">Template Overview</h1>
+                <p class="mt-3 text-gray-600 line-clamp-6">
+                  This research investigates how social media usage influences students’ academic performance in Nigerian universities, focusing on time management and attention span. The study includes quantitative data from 150 students across three faculties and offers recommendations for balanced academic and social media usage. Use this template as a starting point for your own research report, adapt sections for methodology, findings, discussion and conclusion. Clear headings, sample tables and references are included to help you complete a high-quality submission.
+                </p>
+
+                <!-- meta grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                  <div class="space-y-2 text-sm">
+                    <div class="text-xs text-gray-500">Institution</div>
+                    <div class="text-sm text-gray-700">University of Lagos</div>
+                  </div>
+                  <div class="space-y-2 text-sm">
+                    <div class="text-xs text-gray-500">Faculty</div>
+                    <div class="text-sm text-gray-700">Faculty of Arts</div>
+                  </div>
+
+                  <div class="space-y-2 text-sm">
+                    <div class="text-xs text-gray-500">Department</div>
+                    <div class="text-sm text-gray-700">Mass Communication</div>
+                  </div>
+                  <div class="space-y-2 text-sm">
+                    <div class="text-xs text-gray-500">Word Count</div>
+                    <div class="text-sm text-gray-700">12,000 words</div>
+                  </div>
+
+                  <div class="space-y-2 text-sm">
+                    <div class="text-xs text-gray-500">Supervisor</div>
+                    <div class="text-sm text-gray-700">Dr. (Mrs.) O. Ajayi</div>
+                  </div>
+                  <div class="space-y-2 text-sm">
+                    <div class="text-xs text-gray-500">Year</div>
+                    <div class="text-sm text-gray-700">2024</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- AI Quality & Originality -->
+            <div class="bg-white rounded-lg border border-gray-100 shadow-sm p-6">
+              <h2 class="font-semibold mb-4">AI Quality & Originality Check</h2>
+
+              <div class="space-y-4">
+                <!-- Completeness -->
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="text-sm">Completeness</div>
+                    <div class="text-sm font-medium text-green-600">94%</div>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill bg-green-500" style="width:94%"></div>
+                  </div>
+                </div>
+
+                <!-- Plagiarism -->
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="text-sm">Plagiarism Score</div>
+                    <div class="text-sm font-medium text-green-600">97%</div>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill bg-green-500" style="width:97%"></div>
+                  </div>
+                </div>
+
+                <!-- Formatting -->
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="text-sm">Formatting Compliance</div>
+                    <div class="text-sm font-medium text-amber-600">74%</div>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill bg-amber-500" style="width:74%"></div>
+                  </div>
+                </div>
+
+                <!-- Clarity -->
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="text-sm">Clarity & Structure</div>
+                    <div class="text-sm font-medium text-red-500">30%</div>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill bg-red-500" style="width:30%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Related Templates -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Related Templates</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- related card -->
+                <article class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transform transition hover:-translate-y-1">
+                  <div class="relative">
+                    <img src="https://picsum.photos/1200/600?random=10" class="w-full h-36 object-cover" alt="">
+                    <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md chip">Final Year Project</span>
+                  </div>
+                  <div class="p-4">
+                    <h4 class="text-sm font-semibold mb-1">Evaluating Student Engagement Through Online Learning Tools</h4>
+                    <p class="text-xs text-gray-500 mb-3">Educational Technology</p>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <img src="eye.jpg" class="w-6 h-6 rounded-full" alt="">
+                        <div class="text-xs">Lydia Ezoke</div>
+                      </div>
+                      <div class="text-xs text-gray-400">Jul 30, 2025</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transform transition hover:-translate-y-1">
+                  <div class="relative">
+                    <img src="https://picsum.photos/600/360?random=12" class="w-full h-36 object-cover" alt="">
+                    <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md chip">Thesis</span>
+                  </div>
+                  <div class="p-4">
+                    <h4 class="text-sm font-semibold mb-1">The Impact of Radio Advertising on Local Awareness</h4>
+                    <p class="text-xs text-gray-500 mb-3">Mass Communication</p>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <img src="eye.jpg" class="w-6 h-6 rounded-full" alt="">
+                        <div class="text-xs">Joseph Bankole</div>
+                      </div>
+                      <div class="text-xs text-gray-400">Sep 14, 2024</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transform transition hover:-translate-y-1">
+                  <div class="relative">
+                    <img src="https://picsum.photos/600/360?random=13" class="w-full h-36 object-cover" alt="">
+                    <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md chip">Project Report</span>
+                  </div>
+                  <div class="p-4">
+                    <h4 class="text-sm font-semibold mb-1">Social Media and Brand Influence in Gen Z Audiences</h4>
+                    <p class="text-xs text-gray-500 mb-3">Marketing & Communication Studies</p>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2">
+                        <img src="eye.jpg" class="w-6 h-6 rounded-full" alt="">
+                        <div class="text-xs">Joseph Ari</div>
+                      </div>
+                      <div class="text-xs text-gray-400">May 22, 2024</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right column (card details + actions) -->
+          <aside class="space-y-6">
+            <div class="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
+              <div class="flex items-start gap-4">
+                <div class="flex-1">
+                  <h2 class="text-lg font-semibold">Impact of Social Media on Academic Performance</h2>
+                  <div class="text-xs text-gray-500 mt-1">Template Type: Final Year Project • Format: PDF</div>
+                </div>
+                <div class="w-12 h-12">
+                  <img src="eye.jpg" class="w-12 h-12 rounded-full" alt="">
+                </div>
+              </div>
+
+              <div class="mt-4 flex items-center justify-between">
+                <div class="flex items-center gap-3 text-sm text-gray-500">
+                  <div class="flex items-center gap-2">
+                    <img src="eye.jpg" class="w-8 h-8 rounded-full" alt="">
+                    <div>
+                      <div class="font-medium text-sm">Lydia Ezoke</div>
+                      <div class="text-xs text-gray-400">Jul 30, 2025</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div class="flex items-center text-sm text-gray-600 gap-2">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24"><path d="M3 10v10h18V10" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>
+                    <span>256</span>
+                  </div>
+                  <div class="px-3 py-2 bg-white border border-gray-200 rounded-md">
+                    <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24"><path d="M14 3l2 7h7l-5.6 4.1L20 21l-6-4-6 4 1.6-6.9L4 10h7z" fill="currentColor"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5">
+                <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Download Template</button>
+              </div>
+            </div>
+
+            <!-- Additional small cards -->
+            <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-sm">
+              <div class="text-sm text-gray-500 mb-2">Download</div>
+              <div class="text-sm font-medium text-gray-800">Free • PDF</div>
+            </div>
+
+            <div class="bg-white border border-gray-100 rounded-lg p-4 shadow-sm">
+              <div class="text-sm text-gray-500 mb-2">Tags</div>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-gray-100 px-2 py-1 rounded">social-media</span>
+                <span class="text-xs bg-gray-100 px-2 py-1 rounded">research</span>
+                <span class="text-xs bg-gray-100 px-2 py-1 rounded">template</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+
+      <!-- footer -->
+      <footer class="mt-10 border-t bg-white text-sm text-gray-500 px-6 py-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+          <div>© 2025 EveryGrad Template. All rights reserved.</div>
+          <div>Made with ❤️ for students and researchers worldwide</div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- MOBILE SIDEBAR PANEL -->
+  <div id="mobilePanel" class="fixed inset-0 z-40 hidden">
+    <div class="absolute inset-0 bg-black/30" onclick="toggleMobile()"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-64 bg-white border-r border-gray-200 p-4 overflow-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <img src="https://via.placeholder.com/28" class="w-7 h-7" alt="logo">
+        <span class="font-semibold">eTemplates</span>
+        <button class="ml-auto p-1" onclick="toggleMobile()">✕</button>
+      </div>
+      <nav class="space-y-1">
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Home</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Templates</a>
+        <a href="#" class="block px-3 py-2 rounded-md bg-blue-600 text-white">My Uploads</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">My Downloads</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Points & Rewards</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Referrals</a>
+        <hr class="my-4">
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Help Center</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Settings</a>
+      </nav>
+    </div>
+  </div>
+
+<script>
+  // mobile sidebar toggle
+  const mobilePanel = document.getElementById('mobilePanel');
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  if (mobileBtn) mobileBtn.addEventListener('click', toggleMobile);
+  function toggleMobile() { mobilePanel.classList.toggle('hidden'); }
+
+  // upload modal (if you later add) functions can be added similarly
+</script>
+
+</body>
+</html>

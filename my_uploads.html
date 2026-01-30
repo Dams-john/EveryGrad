@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>eTemplates — My Uploads</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small utilities to better match image feel */
+    .card-badge { background: linear-gradient(90deg,#1e3a8a,#0ea5a4); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <div class="min-h-screen flex">
+
+    <!-- SIDEBAR (desktop) -->
+       <aside id="sidebar" class="hidden md:flex md:flex-col w-64 bg-white sidebar-shadow border-r border-gray-200 fixed top-0 left-0 bottom-0 z-20">
+      <div class="h-20 flex items-center px-6 border-b">
+        <img src="EVERYGRAD TEMPLATE 1.png" class="w-7 h-7" alt="logo">
+        <span class="ml-3 font-semibold text-lg">eTemplates</span>
+      </div>
+
+      <nav class="flex-1 px-4 py-6">
+        <p class="text-xs font-semibold text-gray-500 mb-3">MENU</p>
+
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-blue-50 text-blue-600 font-medium" href="index.html">
+        <img src="home.png" alt=""> Home
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="details.html">
+        <img src="Icon.png" alt=""> Templates
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="my_uploads.html">
+        <img src="upload-01.png" alt=""> My Uploads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="downloads_filled.html">
+        <img src="Solid.png" alt=""> My Downloads
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="point_rew_filled.html">
+        <img src="reward.png" alt=""> Points & Rewards
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="refer.png" alt=""> Referrals
+      </a>
+      
+        <hr class="my-4 border-gray-200">
+
+        <p class="text-xs font-semibold text-gray-500 mb-3">GENERAL</p>
+        <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="help.png" alt=""> Help Center
+      </a>
+
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100" href="#">
+        <img src="setting.png" alt=""> Settings
+      </a>
+
+      </nav>
+
+      <div class="px-4 py-4 border-t">
+        <div class="flex items-center gap-3">
+          <img src="eye.jpg" class="w-10 h-10 rounded-full" alt="user">
+          <div>
+            <div class="font-medium text-sm">Samuel O.</div>
+            <div class="text-xs text-gray-400">samuel23@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- MAIN -->
+<div class="flex-1 min-h-screen flex flex-col md:ml-64">
+
+      <!-- TOPBAR -->
+      <header class="flex items-center justify-between gap-4 px-4 md:px-6 py-4 border-b bg-white">
+        <div class="flex items-center gap-4">
+          <!-- mobile hamburger -->
+          <button id="hambtn" class="md:hidden p-2 rounded-md hover:bg-gray-100" aria-label="open menu">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+
+          <div class="hidden md:flex items-center gap-3">
+            <img src="https://via.placeholder.com/28" class="w-7 h-7" alt="logo">
+            <h1 class="text-lg font-semibold">My Uploads</h1>
+          </div>
+        </div>
+
+        <div class="flex-1 flex justify-center px-4">
+          <div class="w-full max-w-2xl relative">
+            <input type="text" placeholder="Search templates by topic, title, or department..."
+                   class="w-full rounded-full border border-gray-200 py-2 px-4 pl-10 focus:outline-none focus:ring-1 focus:ring-blue-500">
+            <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="hidden md:inline-flex items-center gap-2 bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16" stroke-width="1.5"/></svg>
+            Upload Template
+          </button>
+
+          <div class="flex items-center gap-3">
+            <button class="p-2 rounded-md hover:bg-gray-100"><svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118.6 14.5V11a6 6 0 10-12 0v3.5c0 .538-.214 1.055-.595 1.455L4 17h11z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg></button>
+            <button class="p-2 rounded-md hover:bg-gray-100"><svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24"><path d="M6 3v18" stroke="currentColor" stroke-width="1.2"/></svg></button>
+            <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full border-2 border-white shadow-sm" alt="user">
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT -->
+      <main class="flex-1 p-4 md:p-6 lg:p-8 overflow-y-auto">
+
+        <!-- top controls -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+          <div>
+            <h2 class="text-xl font-semibold">Browse Uploads</h2>
+            <p class="text-sm text-gray-500">Manage your uploaded templates</p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <!-- search (mobile visible) -->
+            <div class="md:hidden">
+              <input type="search" placeholder="Search uploaded template..."
+                class="rounded-md border border-gray-200 py-2 px-3 w-56 focus:outline-none">
+            </div>
+
+            <div class="hidden md:flex items-center gap-3">
+              <div class="relative">
+                <input type="text" placeholder="Search uploaded template by topic, type, or department..."
+                      class="rounded-full border border-gray-200 py-2 pl-10 pr-4 w-80 focus:outline-none">
+                <span class="absolute left-3 top-2.5 text-gray-400">🔍</span>
+              </div>
+
+              <select class="border border-gray-200 rounded-md px-3 py-2 text-sm">
+                <option>Sort by</option>
+                <option>Most Relevant</option>
+                <option>Most Popular</option>
+                <option>Most Downloaded</option>
+                <option>Highest Rated</option>
+                <option>Newest First </option>
+              </select>
+                    <button onclick="openFilterModal()" 
+                            class="border border-gray-200 rounded-md px-3 py-2 text-sm flex items-center gap-2">
+                        <svg class="w-4 h-4 text-gray-500" viewBox="0 0 24 24">
+                            <path d="M3 6h18M6 12h12M10 18h4" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                        </svg>
+                        Advance Filter
+                    </button>
+
+
+                        <!-- OVERLAY -->
+<div id="filterModal" 
+     class="hidden fixed inset-0 z-[2000] bg-black/40 backdrop-blur-sm transition-opacity duration-300">
+
+    <!-- OFFCANVAS PANEL -->
+    <div id="filterPanel"
+         class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl 
+                translate-x-full opacity-0 
+                transition-all duration-300 ease-out p-6 overflow-y-auto">
+
+        <!-- CLOSE BUTTON -->
+        <button onclick="closeFilterModal()" 
+                class="absolute right-4 top-4 text-xl text-gray-500 hover:text-black">✕</button>
+
+        <h2 class="text-xl font-semibold mb-6">Advance Filter</h2>
+
+        <!-- FORM CONTENT -->
+        <div class="space-y-5">
+
+            <!-- Institution -->
+            <div>
+                <label class="text-sm font-medium">Institution</label>
+                <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2">
+                    <option>Search your institution name</option>
+                </select>
+            </div>
+
+            <!-- Faculty -->
+            <div>
+                <label class="text-sm font-medium">Faculty</label>
+                <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2">
+                    <option>Select faculty</option>
+                </select>
+            </div>
+
+            <!-- Department -->
+            <div>
+                <label class="text-sm font-medium">Department</label>
+                <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2">
+                    <option>Select department</option>
+                </select>
+            </div>
+
+            <!-- Template Type -->
+            <div>
+                <label class="text-sm font-medium">Template Type</label>
+                <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2">
+                    <option>Select Type</option>
+                </select>
+            </div>
+
+            <!-- Date Range -->
+            <div>
+                <label class="text-sm font-medium">Date Range</label>
+                <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2">
+                    <option>Select date</option>
+                </select>
+            </div>
+
+            <!-- Rating Slider -->
+            <div class="pt-2">
+                <label class="text-sm font-medium">Minimum Rating: <span id="ratingVal">0.0</span></label>
+                <input id="ratingSlider" type="range" min="0" max="5" step="0.1"
+                       class="w-full mt-1 accent-blue-600">
+                <div class="flex justify-between text-xs text-gray-500">
+                    <span>0.0</span><span>5.0</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="mt-8 flex justify-between gap-4">
+            <button onclick="closeFilterModal()"
+                    class="w-1/2 py-2 border border-gray-300 rounded-lg">
+                Reset Filter
+            </button>
+            <button class="w-1/2 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                Apply Filter
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+              <!-- upload (desktop) placed earlier as well -->
+              <button onclick="openUploadModal()" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">+ Upload Template</button>
+            </div>
+
+            <!-- mobile upload -->
+            <button onclick="openUploadModal()" class="md:hidden bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700">+ Upload</button>
+          </div>
+        </div>
+
+        <!-- CARDS GRID -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- card (repeat many times) -->
+          <article class="bg-white rounded-lg border border-gray-100 overflow-hidden shadow-sm transform transition hover:shadow-md hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://picsum.photos/600/360?random=1" alt="thumb" class="w-full h-40 object-cover">
+              <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md card-badge">Final Year Project</span>
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-blue-600 font-semibold mb-2">COMPUTER SCIENCE</div>
+              <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">Impact of Social Media on Academic Performance</h3>
+              <p class="text-sm text-gray-600 mb-3 line-clamp-3">This research investigates how social media usage influences students’ academic performance and study habits.</p>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full" alt="author">
+                  <div>
+                    <div class="text-sm font-medium">Lydia Ezoke</div>
+                    <div class="text-xs text-gray-400">July 30, 2025</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3 text-sm text-gray-500">
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4" viewBox="0 0 24 24"><path d="M3 10v10h18V10" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>256</div>
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24"><path d="M12 17l-5.878 3.09 1.122-6.545L2 8.91l6.561-.953L12 2l3.439 5.957L22 8.91l-5.244 4.635 1.122 6.545z" stroke="currentColor" stroke-width="0.6" fill="currentColor"/></svg>4.9</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- card 2 -->
+          <article class="bg-white rounded-lg border border-gray-100 overflow-hidden shadow-sm transform transition hover:shadow-md hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://picsum.photos/600/360?random=2" alt="thumb" class="w-full h-40 object-cover">
+              <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md card-badge">Thesis</span>
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-blue-600 font-semibold mb-2">MASS COMMUNICATION</div>
+              <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">The Impact of Radio Advertising on Local Awareness</h3>
+              <p class="text-sm text-gray-600 mb-3 line-clamp-3">This research examines the effectiveness of radio advertising in shaping public awareness.</p>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full" alt="author">
+                  <div>
+                    <div class="text-sm font-medium">Lydia Ezoke</div>
+                    <div class="text-xs text-gray-400">July 30, 2025</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3 text-sm text-gray-500">
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4" viewBox="0 0 24 24"><path d="M3 10v10h18V10" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>256</div>
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24"><path d="M12 17l-5.878 3.09 1.122-6.545L2 8.91l6.561-.953L12 2l3.439 5.957L22 8.91l-5.244 4.635 1.122 6.545z" stroke="currentColor" stroke-width="0.6" fill="currentColor"/></svg>4.9</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- card 3 -->
+          <article class="bg-white rounded-lg border border-gray-100 overflow-hidden shadow-sm transform transition hover:shadow-md hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://picsum.photos/600/360?random=3" alt="thumb" class="w-full h-40 object-cover">
+              <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md card-badge">Project Report</span>
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-blue-600 font-semibold mb-2">MARKETING & COMMUNICATION STUDIES</div>
+              <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">Social Media and Brand Influence in Gen Z Audiences</h3>
+              <p class="text-sm text-gray-600 mb-3 line-clamp-3">The research investigates how social media platforms influence brand perception and loyalty among Gen Z.</p>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full" alt="author">
+                  <div>
+                    <div class="text-sm font-medium">Lydia Ezoke</div>
+                    <div class="text-xs text-gray-400">July 30, 2025</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3 text-sm text-gray-500">
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4" viewBox="0 0 24 24"><path d="M3 10v10h18V10" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>256</div>
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24"><path d="M12 17l-5.878 3.09 1.122-6.545L2 8.91l6.561-.953L12 2l3.439 5.957L22 8.91l-5.244 4.635 1.122 6.545z" stroke="currentColor" stroke-width="0.6" fill="currentColor"/></svg>4.9</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Repeat more cards to populate grid -->
+          <article class="bg-white rounded-lg border border-gray-100 overflow-hidden shadow-sm transform transition hover:shadow-md hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://picsum.photos/600/360?random=4" alt="thumb" class="w-full h-40 object-cover">
+              <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md card-badge">Lab Report</span>
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-blue-600 font-semibold mb-2">BUSINESS</div>
+              <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">Business Plan Template</h3>
+              <p class="text-sm text-gray-600 mb-3 line-clamp-3">Professional business plan template with financial projections.</p>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full" alt="author">
+                  <div>
+                    <div class="text-sm font-medium">Lydia Ezoke</div>
+                    <div class="text-xs text-gray-400">July 30, 2025</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3 text-sm text-gray-500">
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4" viewBox="0 0 24 24"><path d="M3 10v10h18V10" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>2.5k</div>
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24"><path d="M12 17l-5.878 3.09 1.122-6.545L2 8.91l6.561-.953L12 2l3.439 5.957L22 8.91l-5.244 4.635 1.122 6.545z" stroke="currentColor" stroke-width="0.6" fill="currentColor"/></svg>4.9</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-lg border border-gray-100 overflow-hidden shadow-sm transform transition hover:shadow-md hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://picsum.photos/600/360?random=5" alt="thumb" class="w-full h-40 object-cover">
+              <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md card-badge">Proposal</span>
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-blue-600 font-semibold mb-2">SCIENCES</div>
+              <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">Lab Report Structure</h3>
+              <p class="text-sm text-gray-600 mb-3 line-clamp-3">Detailed lab report template for science courses with data visualization sections.</p>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full" alt="author">
+                  <div>
+                    <div class="text-sm font-medium">Lydia Ezoke</div>
+                    <div class="text-xs text-gray-400">July 30, 2025</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3 text-sm text-gray-500">
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4" viewBox="0 0 24 24"><path d="M3 10v10h18V10" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>2.2k</div>
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24"><path d="M12 17l-5.878 3.09 1.122-6.545L2 8.91l6.561-.953L12 2l3.439 5.957L22 8.91l-5.244 4.635 1.122 6.545z" stroke="currentColor" stroke-width="0.6" fill="currentColor"/></svg>4.9</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-lg border border-gray-100 overflow-hidden shadow-sm transform transition hover:shadow-md hover:-translate-y-1">
+            <div class="relative">
+              <img src="https://picsum.photos/600/360?random=6" alt="thumb" class="w-full h-40 object-cover">
+              <span class="absolute left-3 top-3 text-xs text-white px-2 py-1 rounded-md card-badge">Case-study</span>
+            </div>
+            <div class="p-4">
+              <div class="text-xs text-blue-600 font-semibold mb-2">COMPUTER SCIENCE</div>
+              <h3 class="font-semibold text-gray-900 mb-2 line-clamp-2">Research Paper Template - APA Style</h3>
+              <p class="text-sm text-gray-600 mb-3 line-clamp-3">Comprehensive thesis proposal template for graduate students.</p>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img src="https://via.placeholder.com/36" class="w-8 h-8 rounded-full" alt="author">
+                  <div>
+                    <div class="text-sm font-medium">Lydia Ezoke</div>
+                    <div class="text-xs text-gray-400">July 30, 2025</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3 text-sm text-gray-500">
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4" viewBox="0 0 24 24"><path d="M3 10v10h18V10" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>5k</div>
+                  <div class="flex items-center gap-1"><svg class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24"><path d="M12 17l-5.878 3.09 1.122-6.545L2 8.91l6.561-.953L12 2l3.439 5.957L22 8.91l-5.244 4.635 1.122 6.545z" stroke="currentColor" stroke-width="0.6" fill="currentColor"/></svg>4.9</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- pagination / empty bottom spacer -->
+        <div class="mt-8 flex justify-end">
+          <nav class="inline-flex items-center gap-2 text-sm">
+            <button class="px-3 py-2 rounded-md border border-gray-200 bg-white">Prev</button>
+            <button class="px-3 py-2 rounded-md border border-gray-200 bg-white">1</button>
+            <button class="px-3 py-2 rounded-md border border-gray-200 bg-white">2</button>
+            <button class="px-3 py-2 rounded-md border border-gray-200 bg-white">Next</button>
+          </nav>
+        </div>
+
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="border-t bg-white text-sm text-gray-500 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+          <div>© 2025 EveryGrad Template. All rights reserved.</div>
+          <div>Made with ❤️ for students and researchers worldwide</div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- MOBILE SIDEBAR PANEL -->
+  <div id="mobilePanel" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/30" onclick="toggleMobile()"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-64 bg-white border-r border-gray-200 p-4 overflow-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <img src="https://via.placeholder.com/28" class="w-7 h-7" alt="logo">
+        <span class="font-semibold">eTemplates</span>
+        <button class="ml-auto p-1" onclick="toggleMobile()">✕</button>
+      </div>
+      <nav class="space-y-1">
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Home</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Templates</a>
+        <a href="#" class="block px-3 py-2 rounded-md bg-blue-600 text-white rounded-md">My Uploads</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">My Downloads</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Points & Rewards</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Referrals</a>
+        <hr class="my-4">
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Help Center</a>
+        <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-50">Settings</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- UPLOAD MODAL (simple trigger example) -->
+  <div id="uploadModal" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 p-4">
+    <div class="bg-white w-full max-w-2xl rounded-xl shadow-lg p-6 md:p-8 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeUploadModal()" class="absolute right-4 top-4 text-xl text-gray-500 hover:text-black">✕</button>
+      <h3 class="text-xl font-semibold mb-4">Upload Template</h3>
+      <!-- minimal form demo -->
+      <div class="space-y-4">
+        <label class="block border-2 border-dashed border-gray-300 rounded-lg py-6 text-center cursor-pointer">
+          <input type="file" class="hidden">
+          <div>
+            <div class="text-blue-600 font-semibold">Click to upload</div>
+            <div class="text-xs text-gray-400">PDF or Doc (max. 4MB)</div>
+          </div>
+        </label>
+
+        <input class="w-full border border-gray-200 rounded-md px-3 py-2" placeholder="Template title">
+        <textarea class="w-full border border-gray-200 rounded-md px-3 py-2" rows="4" placeholder="Description"></textarea>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <select class="w-full border border-gray-200 rounded-md px-3 py-2">
+            <option>Select Institution</option>
+          </select>
+          <select class="w-full border border-gray-200 rounded-md px-3 py-2">
+            <option>Select Faculty</option>
+          </select>
+          <select class="w-full border border-gray-200 rounded-md px-3 py-2">
+            <option>Select Department</option>
+          </select>
+          <select class="w-full border border-gray-200 rounded-md px-3 py-2">
+            <option>Select Template Type</option>
+          </select>
+        </div>
+
+        <input class="w-full border border-gray-200 rounded-md px-3 py-2" placeholder="Add tags and press Enter">
+
+        <div class="flex justify-end gap-3">
+          <button onclick="closeUploadModal()" class="px-4 py-2 border rounded-md">Cancel</button>
+          <button class="px-4 py-2 bg-blue-600 text-white rounded-md">Upload Template</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // mobile sidebar toggle
+  const mobilePanel = document.getElementById('mobilePanel');
+  function toggleMobile() {
+    mobilePanel.classList.toggle('hidden');
+  }
+  document.getElementById('hambtn').addEventListener('click', toggleMobile);
+
+  // modal
+  function openUploadModal(){ document.getElementById('uploadModal').classList.remove('hidden'); }
+  function closeUploadModal(){ document.getElementById('uploadModal').classList.add('hidden'); }
+
+   document.addEventListener('click', (e) => {
+    if (!mobilePanel.classList.contains('hidden')) {
+      const panel = mobilePanel.querySelector('div');
+      if (!panel.contains(e.target) && !e.target.closest('#hambtn')) {
+        mobilePanel.classList.add('hidden');
+      }
+    }
+  });
+
+
+
+
+function openFilterModal() {
+    const modal = document.getElementById("filterModal");
+    const panel = document.getElementById("filterPanel");
+    modal.classList.remove("hidden");
+
+    setTimeout(() => {
+        panel.classList.remove("translate-x-full", "opacity-0");
+    }, 10);
+}
+
+function closeFilterModal() {
+    const modal = document.getElementById("filterModal");
+    const panel = document.getElementById("filterPanel");
+
+    panel.classList.add("translate-x-full", "opacity-0");
+
+    setTimeout(() => {
+        modal.classList.add("hidden");
+    }, 300);
+}
+
+document.getElementById("ratingSlider").addEventListener("input", function () {
+    document.getElementById("ratingVal").textContent = this.value;
+});
+</script>
+</body>
+</html>

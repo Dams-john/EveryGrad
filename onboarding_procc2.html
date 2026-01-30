@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personalize Experience</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg {
+      /* background: radial-gradient(circle at 50% 20%, #ffffff 0%, #eef3ff 40%, #e3ebff 80%); */
+    }
+    .dropdown-active {
+      border: 1px solid #2563eb !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen gradient-bg flex items-center justify-center p-6">
+  <div class="w-full max-w-xl bg-white/60 backdrop-blur-md rounded-xl shadow-lg p-10">
+    <!-- Logo -->
+    <div class="flex mb-6">
+      <img src="EVERYGRAD TEMPLATE 1.png" class="w-10" />
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-xl font-semibold text-center">Let’s personalize your experience</h2>
+    <p class="text-center text-sm text-gray-500 mt-1">Select your institution and department so we can show relevant templates.</p>
+
+    <!-- Progress bar -->
+    <div class="w-full h-1.5 bg-gray-200 rounded-full mb-8 mt-2">
+      <div class="h-full bg-blue-600 rounded-full w-100"></div>
+    </div>
+
+    <!-- Institution -->
+    <label class="text-sm font-medium">Institution</label>
+    <div class="relative mt-1 mb-4">
+      <input type="text" placeholder="Search your institution name" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none" id="institutionInput"/>
+      <div id="institutionDropdown" class="absolute hidden bg-white border border-gray-200 shadow-md mt-1 rounded-lg w-full max-h-56 overflow-y-auto z-30">
+        <div class="p-3 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+          <span>Abia State University (ABSU)</span>
+        </div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+          <span>Ahmadu Bello University (ABU), Zaria</span>
+        </div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+          <span>Ambrose Alli University (AAU), Ekpoma</span>
+        </div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer flex items-center gap-2">
+          <span>Bayero University, Kano (BUK)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faculty -->
+    <label class="text-sm font-medium">Faculty</label>
+    <div class="relative mt-1 mb-4">
+      <input placeholder="Select faculty" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none" id="facultyInput" readonly />
+      <div id="facultyDropdown" class="absolute hidden bg-white border border-gray-200 shadow-md mt-1 rounded-lg w-full max-h-56 overflow-y-auto z-30">
+        <div class="p-3 hover:bg-gray-100 cursor-pointer">Faculty of Agriculture</div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer">Faculty of Arts</div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer">Faculty of Basic Medical Sciences</div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer">Faculty of Biological Sciences</div>
+      </div>
+    </div>
+
+    <!-- Department -->
+    <label class="text-sm font-medium">Department</label>
+    <div class="relative mt-1 mb-6">
+      <input placeholder="Select department" class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none" id="departmentInput" readonly />
+      <div id="departmentDropdown" class="absolute hidden bg-white border border-gray-200 shadow-md mt-1 rounded-lg w-full max-h-56 overflow-y-auto z-30">
+        <div class="p-3 hover:bg-gray-100 cursor-pointer">English & Literary Studies</div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer">History & International Studies</div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer">Linguistics & African Languages</div>
+        <div class="p-3 hover:bg-gray-100 cursor-pointer">Philosophy</div>
+      </div>
+    </div>
+
+    <!-- Continue Button -->
+    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Continue</button>
+  </div>
+
+  <script>
+    function setupDropdown(inputId, dropdownId) {
+      const input = document.getElementById(inputId);
+      const dropdown = document.getElementById(dropdownId);
+
+      input.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
+        input.classList.toggle("dropdown-active");
+      });
+
+      dropdown.querySelectorAll("div").forEach(option => {
+        option.addEventListener("click", () => {
+          input.value = option.innerText.trim();
+          dropdown.classList.add("hidden");
+          input.classList.add("dropdown-active");
+        });
+      });
+    }
+
+    setupDropdown("institutionInput", "institutionDropdown");
+    setupDropdown("facultyInput", "facultyDropdown");
+    setupDropdown("departmentInput", "departmentDropdown");
+  </script>
+</body>
+</html>
